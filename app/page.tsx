@@ -77,11 +77,6 @@ const faqs = [
       "Push notifications are real-time alerts delivered through your browser or PWA. You can enable them during onboarding or from your dashboard settings."
   },
   {
-    question: "What does “backtested” mean?",
-    answer:
-      "Backtested strategies are evaluated on historical data to understand how the rules performed in the past. Historical results are not indicative of future outcomes."
-  },
-  {
     question: "Can I cancel anytime?",
     answer:
       "Yes. You can cancel or change your plan from your account settings at any time."
