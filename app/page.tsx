@@ -11,8 +11,8 @@ const PRICING = {
 };
 
 const CHECKOUT_LINKS = {
-  trial: "https://www.strategyfundamentals.com/pricing",
-  monthly: "https://www.strategyfundamentals.com/pricing"
+  trial: "https://www.optionfundamentals.com/product/stock-fundamentals-29-00/",
+  monthly: "https://www.optionfundamentals.com/product/stock-fundamentals-29-00/"
 };
 
 const trustBullets = [
