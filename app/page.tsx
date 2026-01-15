@@ -354,25 +354,18 @@ export default function Home() {
                 Educational newsletter + dashboard for backtested strategy rules.
               </p>
             </div>
-            <div className="flex flex-wrap gap-4 text-sm font-semibold text-slate-600">
-              <a href="#" className="transition hover:text-accent-600">
-                Terms
-              </a>
-              <a href="#" className="transition hover:text-accent-600">
-                Privacy
-              </a>
-              <a href="#" className="transition hover:text-accent-600">
-                Disclosures
-              </a>
+            <div className="text-sm font-semibold text-slate-600">
+              Disclaimer - Disclaimer
             </div>
           </div>
           <p className="mt-6 text-xs text-slate-500">
-            Stocks Fundamentals is for educational and informational purposes
-            only and does not provide financial advice. All signals, trade ideas,
-            and strategy rules are based on historical data and are not
-            guarantees of future results. You are solely responsible for your
-            own trading decisions. Historical backtests are not indicative of
-            future performance.
+            Stocks Fundamentals is a subscription-based financial information
+            and market commentary newsletter. All content is provided for
+            educational and informational purposes only and should not be
+            considered investment advice, a recommendation, or an offer to buy
+            or sell any security. Trading and investing involve risk, and past
+            performance is not indicative of future results. You are solely
+            responsible for your trading and investment decisions.
           </p>
         </Container>
       </footer>
