@@ -6,13 +6,13 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const PRICING = {
-  trialPrice: "$0 / 21 days",
-  bundlePrice: "$157/month"
+  trialPrice: "$0 / 14 days",
+  monthlyPrice: "$29/month"
 };
 
 const CHECKOUT_LINKS = {
   trial: "https://www.strategyfundamentals.com/pricing",
-  bundle: "https://www.strategyfundamentals.com/pricing"
+  monthly: "https://www.strategyfundamentals.com/pricing"
 };
 
 const trustBullets = [
@@ -23,7 +23,7 @@ const trustBullets = [
 
 const steps = [
   {
-    title: "Pick a strategy bundle",
+    title: "Pick your strategies",
     description:
       "Choose the rule sets that align with your timeframe and market focus."
   },
@@ -94,20 +94,20 @@ const faqs = [
   {
     question: "What markets/timeframes does this cover?",
     answer:
-      "We focus on U.S. equities with multiple timeframes, from intraday to swing setups. Coverage evolves as new strategy bundles are added."
+      "We focus on U.S. equities with multiple timeframes, from intraday to swing setups. Coverage evolves as new strategies are added."
   }
 ];
 
 const pricingDetails = [
   "Full dashboard access",
   "Email newsletter + alerts",
-  "Strategy bundle updates",
+  "Strategy updates",
   "Onboarding support"
 ];
 
-const bundleDetails = [
+const monthlyDetails = [
   ...pricingDetails,
-  "Access to all 8 packages",
+  "Full strategy library access",
   "Cancel anytime",
   "Priority push notifications"
 ];
@@ -195,7 +195,7 @@ export default function Home() {
                   Free trial access
                 </p>
                 <h2 className="mt-3 text-2xl font-semibold text-slate-900">
-                  Get 21 days of signals for $0.
+                  Get 14 days of signals for $0.
                 </h2>
                 <p className="mt-2 text-sm text-slate-600">
                   Share your details to unlock the dashboard. No credit card
@@ -417,7 +417,7 @@ export default function Home() {
           <Container>
             <SectionHeading
               eyebrow="Pricing"
-              title="Start with a free trial, then unlock full bundles"
+              title="Start with a free trial, then unlock full access"
               description="Choose the plan that fits your workflow. Cancel anytime."
               align="center"
             />
@@ -451,21 +451,21 @@ export default function Home() {
                 <div className="rounded-[22px] bg-white/90 p-8">
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">
-                      Bundle
+                      Monthly
                     </p>
                     <span className="rounded-full bg-accent-50 px-3 py-1 text-xs font-semibold text-accent-700">
                       Most popular
                     </span>
                   </div>
                   <p className="mt-4 text-4xl font-semibold text-slate-900">
-                    {PRICING.bundlePrice}
+                    {PRICING.monthlyPrice}
                   </p>
                   <p className="mt-2 text-sm text-slate-600">
-                    50% less than subscribing to 8 individual packages, with access to
-                    all 8 packages. Cancel anytime.
+                    Full access to strategies, alerts, and dashboard updates.
+                    Cancel anytime.
                   </p>
                   <ul className="mt-6 space-y-3 text-sm text-slate-600">
-                    {bundleDetails.map((item) => (
+                    {monthlyDetails.map((item) => (
                       <li key={item} className="flex items-center gap-2">
                         <span className="h-2 w-2 rounded-full bg-gradient-to-r from-emerald-500 to-sky-500"></span>
                         {item}
@@ -473,10 +473,10 @@ export default function Home() {
                     ))}
                   </ul>
                   <Link
-                    href={CHECKOUT_LINKS.bundle}
+                    href={CHECKOUT_LINKS.monthly}
                     className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                   >
-                    Subscribe to Bundle
+                    Start Monthly Plan
                   </Link>
                 </div>
               </div>
@@ -526,7 +526,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-4">
                   <Link
-                    href={CHECKOUT_LINKS.bundle}
+                    href={CHECKOUT_LINKS.monthly}
                     className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                   >
                     View Pricing & Plans
