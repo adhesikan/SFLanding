@@ -21,50 +21,6 @@ const trustBullets = [
   "Real-time alerts on phone & desktop"
 ];
 
-const steps = [
-  {
-    title: "Pick your strategies",
-    description:
-      "Choose the rule sets that align with your timeframe and market focus."
-  },
-  {
-    title: "Receive dashboard signals + push alerts",
-    description:
-      "Get notified when a setup meets the historical rules. PWA + push notifications supported."
-  },
-  {
-    title: "Review & decide",
-    description:
-      "You control your trades. Use the context and risk notes to make your own decisions."
-  }
-];
-
-const featureCards = [
-  {
-    title: "Rule-based entries/exits",
-    description:
-      "Clear historical criteria help you understand what triggers each signal."
-  },
-  {
-    title: "Real-time dashboard updates",
-    description:
-      "Watch signals update throughout the session with concise, contextual status labels."
-  },
-  {
-    title: "Push notifications",
-    description: "Desktop + mobile PWA alerts keep you on top of new setups."
-  },
-  {
-    title: "Simple onboarding",
-    description: "Start with a guided setup and quick-start walkthroughs."
-  },
-  {
-    title: "Risk notes & trade-plan context",
-    description:
-      "Every setup includes considerations to keep risk in view before you act."
-  }
-];
-
 const faqs = [
   {
     question: "Is this financial advice?",
@@ -116,14 +72,8 @@ export default function Home() {
             Stock Fundamentals
           </div>
           <nav className="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
-            <a className="transition hover:text-accent-600" href="#how-it-works">
-              How it Works
-            </a>
             <a className="transition hover:text-accent-600" href="#dashboard">
               Dashboard
-            </a>
-            <a className="transition hover:text-accent-600" href="#alerts">
-              Alerts
             </a>
             <a className="transition hover:text-accent-600" href="#pricing">
               Pricing
@@ -168,12 +118,6 @@ export default function Home() {
                 >
                   Start Your 14-Day Free Trial
                 </Link>
-                <a
-                  href="#how-it-works"
-                  className="rounded-full border border-white/70 bg-white/60 px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-emerald-200 hover:text-slate-900"
-                >
-                  Preview the Workflow
-                </a>
               </div>
               <div className="mt-8 flex flex-col gap-2 text-sm text-slate-600">
                 {trustBullets.map((bullet) => (
@@ -270,34 +214,6 @@ export default function Home() {
           </Container>
         </section>
 
-        <section id="how-it-works" className="py-20">
-          <Container>
-            <SectionHeading
-              eyebrow="How it works"
-              title="A transparent workflow designed for clarity"
-              description="Pick the strategies you want to follow, receive alerts, and review each setup with full context before deciding how to act."
-            />
-            <div className="mt-12 grid gap-6 lg:grid-cols-3">
-              {steps.map((step, index) => (
-                <div
-                  key={step.title}
-                  className="rounded-2xl border border-white/70 bg-white/80 p-6 shadow-soft backdrop-blur"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-50 text-sm font-semibold text-accent-700">
-                    0{index + 1}
-                  </div>
-                  <h3 className="mt-4 text-lg font-semibold text-slate-900">
-                    {step.title}
-                  </h3>
-                  <p className="mt-3 text-sm text-slate-600">
-                    {step.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </Container>
-        </section>
-
         <section
           id="dashboard"
           className="bg-gradient-to-b from-emerald-50 via-white to-sky-50 py-20"
@@ -334,76 +250,6 @@ export default function Home() {
                   Illustrative dashboard layout. Educational signals only.
                 </p>
               </div>
-            </div>
-          </Container>
-        </section>
-
-        <section id="alerts" className="py-20">
-          <Container>
-            <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
-              <div>
-                <SectionHeading
-                  eyebrow="Alerts"
-                  title="Push notifications that keep you aligned with the rules"
-                  description="Enable desktop or mobile PWA alerts to stay informed when a setup hits its historical trigger. You stay in control of every trade decision."
-                />
-                <p className="mt-6 text-sm text-slate-600">
-                  PWA + push notifications supported. Alerts are informational and
-                  do not constitute investment advice.
-                </p>
-              </div>
-              <div className="rounded-3xl border border-white/70 bg-white p-6 shadow-soft">
-                <div className="rounded-2xl border border-emerald-100/80 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-5">
-                  <div className="flex items-center justify-between">
-                    <p className="text-sm font-semibold text-slate-900">
-                      Alert Center
-                    </p>
-                    <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
-                      Push alert sent
-                    </span>
-                  </div>
-                  <p className="mt-4 text-sm text-slate-600">
-                    NVDA • Pullback reset • VWAP reclaim triggered
-                  </p>
-                  <p className="mt-2 text-xs text-slate-500">
-                    Rule-based alert. Review risk notes before acting.
-                  </p>
-                </div>
-                <div className="mt-4 rounded-2xl border border-slate-200 bg-white p-5">
-                  <div className="flex items-center justify-between text-sm text-slate-600">
-                    <span>Daily digest</span>
-                    <span className="font-semibold text-accent-600">Scheduled</span>
-                  </div>
-                  <p className="mt-2 text-xs text-slate-500">
-                    Summary email with setups and risk context.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </section>
-
-        <section className="bg-gradient-to-b from-sky-50 via-white to-emerald-50 py-20">
-          <Container>
-            <SectionHeading
-              eyebrow="Features"
-              title="Everything you need to stay disciplined"
-              description="A streamlined dashboard, clear signals, and context-rich notes to help you keep your process consistent."
-            />
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {featureCards.map((feature) => (
-                <div
-                  key={feature.title}
-                  className="rounded-2xl border border-white/70 bg-white/80 p-6 shadow-soft backdrop-blur"
-                >
-                  <h3 className="text-lg font-semibold text-slate-900">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-3 text-sm text-slate-600">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
             </div>
           </Container>
         </section>
