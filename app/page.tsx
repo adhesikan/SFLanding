@@ -16,9 +16,9 @@ const CHECKOUT_LINKS = {
 };
 
 const trustBullets = [
-  "Trade ideas daily",
-  "Rules-based signals + alerts",
-  "Transparent, backtested methodology"
+  "Entries & Targets",
+  "High-quality stock setups",
+  "Real-time alerts on phone & desktop"
 ];
 
 const steps = [
@@ -156,22 +156,22 @@ export default function Home() {
                 Stock Fundamentals Newsletter
               </p>
               <h1 className="mt-4 text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl">
-                A data-driven trading newsletter powered by historical strategy
-                testing.
+                Smarter Stock Trade Ideas. Delivered.
               </h1>
               <p className="mt-5 text-lg text-slate-600">
-                Receive disciplined trade setups and alerts designed to reduce
-                guesswork and emotional trading.
+                Stock Fundamentals Newsletter sends curated stock setups with
+                clear entry and target levels — so you can act fast and stay
+                disciplined.
               </p>
               <p className="mt-4 text-sm text-slate-500">
-                Past performance does not guarantee future results.
+                No credit card required. Cancel anytime.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href={CHECKOUT_LINKS.trial}
                   className="rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                 >
-                  Join the Newsletter
+                  Start Your 14-Day Free Trial
                 </Link>
                 <a
                   href="#how-it-works"
