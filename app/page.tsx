@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "Is this financial advice?",
     answer:
-      "No. Stock Fundamentals is an educational newsletter and dashboard. We share historical strategy rules and signals for informational purposes only."
+      "No. Stocks Fundamentals is an educational newsletter and dashboard. We share historical strategy rules and signals for informational purposes only."
   },
   {
     question: "What are push notifications and how do I enable them?",
@@ -63,7 +63,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-white/60 bg-white/80 backdrop-blur">
         <Container className="flex items-center justify-between py-4">
           <div className="text-xl font-semibold text-slate-900 sm:text-2xl">
-            Stock Fundamentals
+            Stocks Fundamentals
           </div>
           <nav className="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
             <a className="transition hover:text-accent-600" href="#dashboard">
@@ -92,13 +92,13 @@ export default function Home() {
           <Container className="fade-up grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">
-                Stock Fundamentals Newsletter
+                Stocks Fundamentals Newsletter
               </p>
               <h1 className="mt-4 text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl">
                 Smarter Stock Trade Ideas. Delivered.
               </h1>
               <p className="mt-5 text-lg text-slate-600">
-                Stock Fundamentals Newsletter sends curated stock setups with
+                Stocks Fundamentals Newsletter sends curated stock setups with
                 clear entry and target levels — so you can act fast and stay
                 disciplined.
               </p>
@@ -260,7 +260,7 @@ export default function Home() {
               <div className="w-full max-w-xl rounded-3xl border border-transparent bg-gradient-to-br from-emerald-600 via-teal-600 to-sky-500 p-[1px] shadow-soft">
                 <div className="rounded-[22px] bg-white/90 p-8">
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">
-                    Stock Fundamentals Membership
+                    Stocks Fundamentals Membership
                   </p>
                   <p className="mt-4 text-4xl font-semibold text-slate-900">
                     {PRICING.trialPrice}
@@ -269,7 +269,7 @@ export default function Home() {
                     {PRICING.monthlyPrice}
                   </p>
                   <p className="mt-4 text-sm text-slate-600">
-                    Full access to Stock Fundamentals Newsletter, alerts, and dashboard.
+                    Full access to Stocks Fundamentals Newsletter, alerts, and dashboard.
                   </p>
                   <ul className="mt-6 space-y-3 text-sm text-slate-600">
                     {pricingDetails.map((item) => (
@@ -329,7 +329,7 @@ export default function Home() {
                     Get the newsletter + dashboard access today
                   </h2>
                   <p className="mt-4 text-base text-slate-600">
-                    Join Stock Fundamentals for educational signals, dashboard
+                    Join Stocks Fundamentals for educational signals, dashboard
                     alerts, and transparent historical strategy rules. No
                     recommendations — just clear setups you can evaluate.
                   </p>
@@ -356,7 +356,7 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-6 border-b border-white/70 pb-8 md:flex-row md:items-center">
             <div>
               <p className="text-lg font-semibold text-slate-900">
-                Stock Fundamentals
+                Stocks Fundamentals
               </p>
               <p className="mt-2 text-sm text-slate-600">
                 Educational newsletter + dashboard for backtested strategy rules.
@@ -375,7 +375,7 @@ export default function Home() {
             </div>
           </div>
           <p className="mt-6 text-xs text-slate-500">
-            Stock Fundamentals is for educational and informational purposes
+            Stocks Fundamentals is for educational and informational purposes
             only and does not provide financial advice. All signals, trade ideas,
             and strategy rules are based on historical data and are not
             guarantees of future results. You are solely responsible for your
