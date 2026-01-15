@@ -51,10 +51,10 @@ const faqs = [
 
 const pricingDetails = [
   "Full dashboard access",
-  "Email newsletter & real-time alerts",
-  "Strategy updates",
+  "Daily trade ideas",
+  "Entry and Target Prices",
   "Onboarding support",
-  "Priority push notifications"
+  "Latest news associated"
 ];
 
 export default function Home() {
