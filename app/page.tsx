@@ -99,18 +99,13 @@ const faqs = [
 ];
 
 const pricingDetails = [
-  "Full dashboard access",
-  "Email newsletter + alerts",
-  "Strategy updates",
-  "Onboarding support"
+  "Daily trade ideas",
+  "Entry and target prices",
+  "Latest news associated",
+  "Easy-to-use dashboard"
 ];
 
-const monthlyDetails = [
-  ...pricingDetails,
-  "Full strategy library access",
-  "Cancel anytime",
-  "Priority push notifications"
-];
+const monthlyDetails = [...pricingDetails];
 
 export default function Home() {
   return (
