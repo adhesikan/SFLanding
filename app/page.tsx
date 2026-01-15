@@ -355,7 +355,7 @@ export default function Home() {
               </p>
             </div>
             <div className="text-sm font-semibold text-slate-600">
-              Disclaimer - Disclaimer
+              Disclaimer
             </div>
           </div>
           <p className="mt-6 text-xs text-slate-500">
