@@ -28,11 +28,6 @@ const faqs = [
       "No. Stocks Fundamentals is an educational newsletter and dashboard. We share historical strategy rules and signals for informational purposes only."
   },
   {
-    question: "What are push notifications and how do I enable them?",
-    answer:
-      "Push notifications are real-time alerts delivered through your browser or PWA. You can enable them during onboarding or from your dashboard settings."
-  },
-  {
     question: "Can I cancel anytime?",
     answer:
       "Yes. You can cancel or change your plan from your account settings at any time."
