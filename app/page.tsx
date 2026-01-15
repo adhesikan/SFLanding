@@ -6,8 +6,8 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 
 const PRICING = {
-  trialPrice: "$0 / 14 days",
-  monthlyPrice: "$29/month"
+  trialPrice: "$0 for 14 days",
+  monthlyPrice: "Then $29/month"
 };
 
 const CHECKOUT_LINKS = {
@@ -50,13 +50,12 @@ const faqs = [
 ];
 
 const pricingDetails = [
-  "Daily trade ideas",
-  "Entry and target prices",
-  "Latest news associated",
-  "Easy-to-use dashboard"
+  "Full dashboard access",
+  "Email newsletter & real-time alerts",
+  "Strategy updates",
+  "Onboarding support",
+  "Priority push notifications"
 ];
-
-const monthlyDetails = [...pricingDetails];
 
 export default function Home() {
   return (
@@ -252,56 +251,28 @@ export default function Home() {
         <section id="pricing" className="py-20">
           <Container>
             <SectionHeading
-              eyebrow="Pricing"
-              title="Start with a free trial, then unlock full access"
-              description="Choose the plan that fits your workflow. Cancel anytime."
+              eyebrow="PRICING"
+              title="Simple pricing"
+              description="Start with a 14-day free trial, then continue for $29/month. Cancel anytime."
               align="center"
             />
-            <div className="mt-12 grid gap-6 lg:grid-cols-2">
-              <div className="rounded-3xl border border-white/70 bg-white/80 p-8 shadow-soft backdrop-blur">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
-                  Trial
-                </p>
-                <p className="mt-4 text-4xl font-semibold text-slate-900">
-                  {PRICING.trialPrice}
-                </p>
-                <p className="mt-2 text-sm text-slate-600">
-                  Explore the dashboard, alerts, and daily summary.
-                </p>
-                <ul className="mt-6 space-y-3 text-sm text-slate-600">
-                  {pricingDetails.map((item) => (
-                    <li key={item} className="flex items-center gap-2">
-                      <span className="h-2 w-2 rounded-full bg-accent-500"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={CHECKOUT_LINKS.trial}
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-full border border-emerald-200 bg-white/70 px-6 py-3 text-sm font-semibold text-emerald-700 transition hover:border-emerald-300 hover:text-emerald-800"
-                >
-                  Start Free Trial
-                </Link>
-              </div>
-              <div className="rounded-3xl border border-transparent bg-gradient-to-br from-emerald-600 via-teal-600 to-sky-500 p-[1px] shadow-soft">
+            <div className="mt-12 flex justify-center">
+              <div className="w-full max-w-xl rounded-3xl border border-transparent bg-gradient-to-br from-emerald-600 via-teal-600 to-sky-500 p-[1px] shadow-soft">
                 <div className="rounded-[22px] bg-white/90 p-8">
-                  <div className="flex items-center justify-between">
-                    <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">
-                      Monthly
-                    </p>
-                    <span className="rounded-full bg-accent-50 px-3 py-1 text-xs font-semibold text-accent-700">
-                      Most popular
-                    </span>
-                  </div>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">
+                    Stock Fundamentals Membership
+                  </p>
                   <p className="mt-4 text-4xl font-semibold text-slate-900">
+                    {PRICING.trialPrice}
+                  </p>
+                  <p className="mt-2 text-base font-medium text-slate-600">
                     {PRICING.monthlyPrice}
                   </p>
-                  <p className="mt-2 text-sm text-slate-600">
-                    Full access to strategies, alerts, and dashboard updates.
-                    Cancel anytime.
+                  <p className="mt-4 text-sm text-slate-600">
+                    Full access to Stock Fundamentals Newsletter, alerts, and dashboard.
                   </p>
                   <ul className="mt-6 space-y-3 text-sm text-slate-600">
-                    {monthlyDetails.map((item) => (
+                    {pricingDetails.map((item) => (
                       <li key={item} className="flex items-center gap-2">
                         <span className="h-2 w-2 rounded-full bg-gradient-to-r from-emerald-500 to-sky-500"></span>
                         {item}
@@ -309,11 +280,14 @@ export default function Home() {
                     ))}
                   </ul>
                   <Link
-                    href={CHECKOUT_LINKS.monthly}
+                    href={CHECKOUT_LINKS.trial}
                     className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                   >
-                    Start Monthly Plan
+                    Start 14-Day Free Trial
                   </Link>
+                  <p className="mt-4 text-xs text-slate-500">
+                    No credit card required. Cancel anytime.
+                  </p>
                 </div>
               </div>
             </div>
@@ -362,19 +336,13 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-4">
                   <Link
-                    href={CHECKOUT_LINKS.monthly}
+                    href={CHECKOUT_LINKS.trial}
                     className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                   >
-                    View Pricing & Plans
-                  </Link>
-                  <Link
-                    href={CHECKOUT_LINKS.trial}
-                    className="inline-flex w-full items-center justify-center rounded-full border border-emerald-200 bg-white/70 px-6 py-3 text-sm font-semibold text-emerald-700 transition hover:border-emerald-300 hover:text-emerald-800"
-                  >
-                    Start Your Free Trial
+                    Start 14-Day Free Trial
                   </Link>
                   <p className="text-xs text-slate-500">
-                    Explore pricing to choose the plan that fits your workflow.
+                    No credit card required. Cancel anytime.
                   </p>
                 </div>
               </div>
