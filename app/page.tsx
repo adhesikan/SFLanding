@@ -69,7 +69,7 @@ const faqs = [
   {
     question: "Is this financial advice?",
     answer:
-      "No. Strategy Fundamentals is an educational newsletter and dashboard. We share historical strategy rules and signals for informational purposes only."
+      "No. Stock Fundamentals is an educational newsletter and dashboard. We share historical strategy rules and signals for informational purposes only."
   },
   {
     question: "What are push notifications and how do I enable them?",
@@ -114,11 +114,11 @@ const bundleDetails = [
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-br from-indigo-50 via-white to-rose-50 text-slate-900">
+    <div className="bg-gradient-to-br from-emerald-50 via-white to-sky-50 text-slate-900">
       <header className="sticky top-0 z-50 border-b border-white/60 bg-white/80 backdrop-blur">
         <Container className="flex items-center justify-between py-4">
           <div className="text-xl font-semibold text-slate-900 sm:text-2xl">
-            Strategy Fundamentals
+            Stock Fundamentals
           </div>
           <nav className="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
             <a className="transition hover:text-accent-600" href="#how-it-works">
@@ -139,7 +139,7 @@ export default function Home() {
           </nav>
           <Link
             href={CHECKOUT_LINKS.trial}
-            className="rounded-full bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-rose-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:from-indigo-700 hover:via-fuchsia-600 hover:to-rose-600"
+            className="rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
           >
             Start Free Trial
           </Link>
@@ -148,12 +148,12 @@ export default function Home() {
 
       <main>
         <section className="relative overflow-hidden pb-20 pt-16 sm:pt-20">
-          <div className="pointer-events-none absolute -left-24 top-12 h-72 w-72 rounded-full bg-gradient-to-br from-indigo-400/40 via-fuchsia-300/40 to-amber-300/30 blur-3xl"></div>
-          <div className="pointer-events-none absolute -right-24 top-24 h-80 w-80 rounded-full bg-gradient-to-br from-rose-400/40 via-orange-300/30 to-indigo-300/30 blur-3xl"></div>
+          <div className="pointer-events-none absolute -left-24 top-12 h-72 w-72 rounded-full bg-gradient-to-br from-emerald-400/40 via-teal-300/40 to-sky-300/30 blur-3xl"></div>
+          <div className="pointer-events-none absolute -right-24 top-24 h-80 w-80 rounded-full bg-gradient-to-br from-sky-400/40 via-cyan-300/30 to-emerald-300/30 blur-3xl"></div>
           <Container className="fade-up grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">
-                Strategy Fundamentals Newsletter
+                Stock Fundamentals Newsletter
               </p>
               <h1 className="mt-4 text-4xl font-semibold leading-tight text-slate-900 sm:text-5xl">
                 A data-driven trading newsletter powered by historical strategy
@@ -169,13 +169,13 @@ export default function Home() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
                   href={CHECKOUT_LINKS.trial}
-                  className="rounded-full bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-rose-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-indigo-700 hover:via-fuchsia-600 hover:to-rose-600"
+                  className="rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                 >
                   Join the Newsletter
                 </Link>
                 <a
                   href="#how-it-works"
-                  className="rounded-full border border-white/70 bg-white/60 px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-indigo-200 hover:text-slate-900"
+                  className="rounded-full border border-white/70 bg-white/60 px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-emerald-200 hover:text-slate-900"
                 >
                   Preview the Workflow
                 </a>
@@ -183,7 +183,7 @@ export default function Home() {
               <div className="mt-8 flex flex-col gap-2 text-sm text-slate-600">
                 {trustBullets.map((bullet) => (
                   <div key={bullet} className="flex items-center gap-2">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-gradient-to-r from-indigo-500 to-rose-500"></span>
+                    <span className="inline-flex h-2 w-2 rounded-full bg-gradient-to-r from-emerald-500 to-sky-500"></span>
                     <span>{bullet}</span>
                   </div>
                 ))}
@@ -208,7 +208,7 @@ export default function Home() {
                       type="text"
                       name="name"
                       placeholder="Jordan Lee"
-                      className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                      className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-200"
                       required
                     />
                   </label>
@@ -218,7 +218,7 @@ export default function Home() {
                       type="email"
                       name="email"
                       placeholder="jordan@email.com"
-                      className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                      className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-200"
                       required
                     />
                   </label>
@@ -228,13 +228,13 @@ export default function Home() {
                       type="tel"
                       name="phone"
                       placeholder="(555) 123-4567"
-                      className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-200"
+                      className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-200"
                       required
                     />
                   </label>
                   <button
                     type="submit"
-                    className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-rose-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-indigo-700 hover:via-fuchsia-600 hover:to-rose-600"
+                    className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                   >
                     Get Free Trial Access
                   </button>
@@ -305,7 +305,7 @@ export default function Home() {
 
         <section
           id="dashboard"
-          className="bg-gradient-to-b from-indigo-50 via-white to-rose-50 py-20"
+          className="bg-gradient-to-b from-emerald-50 via-white to-sky-50 py-20"
         >
           <Container>
             <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
@@ -315,7 +315,7 @@ export default function Home() {
                   title="Everything in one signal-focused workspace"
                   description="Track active setups, review risk notes, and see alert status in one glance. Designed for fast decisions and clean data hygiene."
                 />
-                <div className="mt-6 rounded-2xl border border-indigo-200/70 bg-white/80 p-4 text-sm text-indigo-700 shadow-sm">
+                <div className="mt-6 rounded-2xl border border-emerald-200/70 bg-white/80 p-4 text-sm text-emerald-700 shadow-sm">
                   PWA + push notifications supported for desktop and mobile alerts.
                 </div>
               </div>
@@ -358,7 +358,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="rounded-3xl border border-white/70 bg-white p-6 shadow-soft">
-                <div className="rounded-2xl border border-indigo-100/80 bg-gradient-to-br from-indigo-50 via-white to-rose-50 p-5">
+                <div className="rounded-2xl border border-emerald-100/80 bg-gradient-to-br from-emerald-50 via-white to-sky-50 p-5">
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-semibold text-slate-900">
                       Alert Center
@@ -388,7 +388,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section className="bg-gradient-to-b from-rose-50 via-white to-indigo-50 py-20">
+        <section className="bg-gradient-to-b from-sky-50 via-white to-emerald-50 py-20">
           <Container>
             <SectionHeading
               eyebrow="Features"
@@ -442,12 +442,12 @@ export default function Home() {
                 </ul>
                 <Link
                   href={CHECKOUT_LINKS.trial}
-                  className="mt-8 inline-flex w-full items-center justify-center rounded-full border border-indigo-200 bg-white/70 px-6 py-3 text-sm font-semibold text-indigo-700 transition hover:border-indigo-300 hover:text-indigo-800"
+                  className="mt-8 inline-flex w-full items-center justify-center rounded-full border border-emerald-200 bg-white/70 px-6 py-3 text-sm font-semibold text-emerald-700 transition hover:border-emerald-300 hover:text-emerald-800"
                 >
                   Start Free Trial
                 </Link>
               </div>
-              <div className="rounded-3xl border border-transparent bg-gradient-to-br from-indigo-600 via-fuchsia-600 to-rose-500 p-[1px] shadow-soft">
+              <div className="rounded-3xl border border-transparent bg-gradient-to-br from-emerald-600 via-teal-600 to-sky-500 p-[1px] shadow-soft">
                 <div className="rounded-[22px] bg-white/90 p-8">
                   <div className="flex items-center justify-between">
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-600">
@@ -467,14 +467,14 @@ export default function Home() {
                   <ul className="mt-6 space-y-3 text-sm text-slate-600">
                     {bundleDetails.map((item) => (
                       <li key={item} className="flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-gradient-to-r from-indigo-500 to-rose-500"></span>
+                        <span className="h-2 w-2 rounded-full bg-gradient-to-r from-emerald-500 to-sky-500"></span>
                         {item}
                       </li>
                     ))}
                   </ul>
                   <Link
                     href={CHECKOUT_LINKS.bundle}
-                    className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-rose-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-indigo-700 hover:via-fuchsia-600 hover:to-rose-600"
+                    className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                   >
                     Subscribe to Bundle
                   </Link>
@@ -484,7 +484,7 @@ export default function Home() {
           </Container>
         </section>
 
-        <section id="faq" className="bg-gradient-to-b from-indigo-50 via-white to-rose-50 py-20">
+        <section id="faq" className="bg-gradient-to-b from-emerald-50 via-white to-sky-50 py-20">
           <Container>
             <SectionHeading
               eyebrow="FAQ"
@@ -519,7 +519,7 @@ export default function Home() {
                     Get the newsletter + dashboard access today
                   </h2>
                   <p className="mt-4 text-base text-slate-600">
-                    Join Strategy Fundamentals for educational signals, dashboard
+                    Join Stock Fundamentals for educational signals, dashboard
                     alerts, and transparent historical strategy rules. No
                     recommendations — just clear setups you can evaluate.
                   </p>
@@ -527,13 +527,13 @@ export default function Home() {
                 <div className="flex flex-col gap-4">
                   <Link
                     href={CHECKOUT_LINKS.bundle}
-                    className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-rose-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-indigo-700 hover:via-fuchsia-600 hover:to-rose-600"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                   >
                     View Pricing & Plans
                   </Link>
                   <Link
                     href={CHECKOUT_LINKS.trial}
-                    className="inline-flex w-full items-center justify-center rounded-full border border-indigo-200 bg-white/70 px-6 py-3 text-sm font-semibold text-indigo-700 transition hover:border-indigo-300 hover:text-indigo-800"
+                    className="inline-flex w-full items-center justify-center rounded-full border border-emerald-200 bg-white/70 px-6 py-3 text-sm font-semibold text-emerald-700 transition hover:border-emerald-300 hover:text-emerald-800"
                   >
                     Start Your Free Trial
                   </Link>
@@ -547,12 +547,12 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-white/70 bg-gradient-to-b from-white to-indigo-50 py-12">
+      <footer className="border-t border-white/70 bg-gradient-to-b from-white to-emerald-50 py-12">
         <Container>
           <div className="flex flex-col justify-between gap-6 border-b border-white/70 pb-8 md:flex-row md:items-center">
             <div>
               <p className="text-lg font-semibold text-slate-900">
-                Strategy Fundamentals
+                Stock Fundamentals
               </p>
               <p className="mt-2 text-sm text-slate-600">
                 Educational newsletter + dashboard for backtested strategy rules.
@@ -571,7 +571,7 @@ export default function Home() {
             </div>
           </div>
           <p className="mt-6 text-xs text-slate-500">
-            Strategy Fundamentals is for educational and informational purposes
+            Stock Fundamentals is for educational and informational purposes
             only and does not provide financial advice. All signals, trade ideas,
             and strategy rules are based on historical data and are not
             guarantees of future results. You are solely responsible for your
