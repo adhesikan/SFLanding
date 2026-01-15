@@ -220,9 +220,6 @@ export default function Home() {
                   title="Everything in one signal-focused workspace"
                   description="Track active setups, review risk notes, and see alert status in one glance. Designed for fast decisions and clean data hygiene."
                 />
-                <div className="mt-6 rounded-2xl border border-emerald-200/70 bg-white/80 p-4 text-sm text-emerald-700 shadow-sm">
-                  PWA + push notifications supported for desktop and mobile alerts.
-                </div>
               </div>
               <div className="rounded-3xl border border-white/70 bg-white p-6 shadow-soft">
                 <div className="flex items-center justify-between text-sm font-semibold text-slate-600">
