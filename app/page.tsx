@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "Is this financial advice?",
     answer:
-      "No. Stock Fundamentals is an educational newsletter and dashboard. We share historical strategy rules and signals for informational purposes only."
+      "No. Stock Fundamentals is an educational newsletter and dashboard. We share historical strategy rules and trade ideas for informational purposes only."
   },
   {
     question: "Can I cancel anytime?",
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "Do you execute trades for me?",
     answer:
-      "No. We provide signals and context, but you decide if and when to place any trades."
+      "No. We provide trade ideas and context, but you decide if and when to place any trades."
   },
   {
     question: "What markets/timeframes does this cover?",
@@ -159,7 +159,7 @@ export default function Home() {
                   Free trial access
                 </p>
                 <h2 className="mt-3 text-2xl font-semibold text-slate-900">
-                  Get 14 days of signals for $0.
+                  Get 14 days of trade ideas for $0.
                 </h2>
                 <p className="mt-2 text-sm text-slate-600">
                   Activate your free trial in seconds. No credit card required.
@@ -174,7 +174,7 @@ export default function Home() {
               <div className="mt-6 overflow-hidden rounded-2xl border border-white/70 bg-white shadow-sm">
                 <Image
                   src="/happytrader.png"
-                  alt="Trader reviewing signals on a dashboard"
+                  alt="Trader reviewing trade ideas on a dashboard"
                   width={640}
                   height={420}
                   className="h-auto w-full object-cover"
@@ -243,13 +243,13 @@ export default function Home() {
               <div className="flex flex-col justify-center">
                 <SectionHeading
                   eyebrow="Dashboard preview"
-                  title="Everything in one signal-focused workspace"
+                  title="Everything in one trade-idea-focused workspace"
                   description="Track active setups, review risk notes, and see alert status in one glance. Designed for fast decisions and clean data hygiene."
                 />
               </div>
               <div className="rounded-3xl border border-white/70 bg-white p-6 shadow-soft">
                 <div className="flex items-center justify-between text-sm font-semibold text-slate-600">
-                  <span>Signals dashboard</span>
+                  <span>Trade ideas dashboard</span>
                   <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
                     Live
                   </span>
@@ -264,7 +264,7 @@ export default function Home() {
                   />
                 </div>
                 <p className="mt-4 text-xs text-slate-500">
-                  Illustrative dashboard layout. Educational signals only.
+                  Illustrative dashboard layout. Educational trade ideas only.
                 </p>
               </div>
             </div>
@@ -352,7 +352,7 @@ export default function Home() {
                     Get the newsletter + dashboard access today
                   </h2>
                   <p className="mt-4 text-base text-slate-600">
-                    Join Stock Fundamentals for educational signals, dashboard
+                    Join Stock Fundamentals for educational trade ideas, dashboard
                     alerts, and transparent historical strategy rules. No
                     recommendations — just clear setups you can evaluate.
                   </p>
