@@ -128,6 +128,9 @@ export default function Home() {
                 clear entry and target levels — so you can act fast and stay
                 disciplined.
               </p>
+              <p className="mt-2 text-base text-slate-500">
+                Rule-based trade ideas designed for self-directed traders.
+              </p>
               <p className="mt-4 text-sm text-slate-500">
                 No credit card required. Cancel anytime.
               </p>
@@ -136,7 +139,7 @@ export default function Home() {
                   href={CHECKOUT_LINKS.trial}
                   className="rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                 >
-                  Start Your 14-Day Free Trial
+                  Start Free Trial
                 </Link>
               </div>
               <div className="mt-8 flex flex-col gap-2 text-sm text-slate-600">
@@ -182,20 +185,19 @@ export default function Home() {
                     />
                   </label>
                   <label className="block text-sm font-medium text-slate-700">
-                    Phone number
+                    Phone number (optional)
                     <input
                       type="tel"
                       name="phone"
                       placeholder="(555) 123-4567"
                       className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-200"
-                      required
                     />
                   </label>
                   <button
                     type="submit"
                     className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                   >
-                    Get Free Trial Access
+                    Start Free Trial
                   </button>
                 </form>
                 <p className="mt-4 text-xs text-slate-500">
