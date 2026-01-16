@@ -11,8 +11,10 @@ const PRICING = {
 };
 
 const CHECKOUT_LINKS = {
-  trial: "https://www.optionfundamentals.com/product/stock-fundamentals-29-00/",
-  monthly: "https://www.optionfundamentals.com/product/stock-fundamentals-29-00/"
+  trial:
+    "https://www.optionfundamentals.com/product/stockfundamentals-14-day-free-trial/",
+  monthly:
+    "https://www.optionfundamentals.com/product/stockfundamentals-14-day-free-trial/"
 };
 
 const trustBullets = [
@@ -160,50 +162,14 @@ export default function Home() {
                   Get 14 days of signals for $0.
                 </h2>
                 <p className="mt-2 text-sm text-slate-600">
-                  Share your details to unlock the dashboard. No credit card
-                  required.
+                  Activate your free trial in seconds. No credit card required.
                 </p>
-                <form className="mt-6 space-y-4">
-                  <label className="block text-sm font-medium text-slate-700">
-                    Full name
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Jordan Lee"
-                      className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-200"
-                      required
-                    />
-                  </label>
-                  <label className="block text-sm font-medium text-slate-700">
-                    Email address
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="jordan@email.com"
-                      className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-200"
-                      required
-                    />
-                  </label>
-                  <label className="block text-sm font-medium text-slate-700">
-                    Phone number (optional)
-                    <input
-                      type="tel"
-                      name="phone"
-                      placeholder="(555) 123-4567"
-                      className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-200"
-                    />
-                  </label>
-                  <button
-                    type="submit"
-                    className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
-                  >
-                    Start Free Trial
-                  </button>
-                </form>
-                <p className="mt-4 text-xs text-slate-500">
-                  By submitting, you agree to receive onboarding updates. Cancel
-                  anytime.
-                </p>
+                <Link
+                  href={CHECKOUT_LINKS.trial}
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
+                >
+                  Start Free Trial
+                </Link>
               </div>
               <div className="mt-6 overflow-hidden rounded-2xl border border-white/70 bg-white shadow-sm">
                 <Image
