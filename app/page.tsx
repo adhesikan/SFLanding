@@ -7,7 +7,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 const PRICING = {
   trialPrice: "$0 for 14 days",
-  monthlyPrice: "Then $29/month"
+  monthlyPrice: "Then continue monthly"
 };
 
 const CHECKOUT_LINKS = {
@@ -276,7 +276,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="PRICING"
               title="Simple pricing"
-              description="Start with a 14-day free trial, then continue for $29/month. Cancel anytime."
+              description="Start with a 14-day free trial, then continue monthly. Cancel anytime."
               align="center"
             />
             <div className="mt-12 flex justify-center">
