@@ -52,6 +52,37 @@ const pricingDetails = [
   "Latest news associated"
 ];
 
+const illustrativeTradeIdeas = [
+  {
+    symbol: "ALGN",
+    idea: "Breakout continuation",
+    entry: "$312.40",
+    target: "$334.00",
+    move: "+6.9%"
+  },
+  {
+    symbol: "SHOP",
+    idea: "Pullback support",
+    entry: "$67.80",
+    target: "$72.25",
+    move: "+6.6%"
+  },
+  {
+    symbol: "AMD",
+    idea: "Momentum reclaim",
+    entry: "$168.10",
+    target: "$178.50",
+    move: "+6.2%"
+  },
+  {
+    symbol: "COST",
+    idea: "Trend follow",
+    entry: "$828.60",
+    target: "$862.00",
+    move: "+4.0%"
+  }
+];
+
 export default function Home() {
   return (
     <div className="bg-gradient-to-br from-emerald-50 via-white to-sky-50 text-slate-900">
@@ -188,18 +219,50 @@ export default function Home() {
 
         <section className="py-20">
           <Container>
-            <div className="overflow-hidden rounded-3xl border border-white/70 bg-white shadow-soft">
-              <Image
-                src="/performance.png"
-                alt="Illustrative backtest performance chart"
-                width={1200}
-                height={675}
-                className="h-auto w-full object-cover"
-              />
+            <div className="mx-auto max-w-5xl text-center">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+                Illustrative Trade Idea Examples
+              </p>
             </div>
-            <p className="mt-4 text-center text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-              Sample performance snapshot
+            <p className="mx-auto mt-4 max-w-5xl text-xs text-slate-500">
+              Illustrative examples only. The trade ideas shown are hypothetical
+              examples provided for informational purposes and do not represent
+              actual trading results, client performance, or a complete history
+              of alerts. Results are not typical and will vary based on
+              execution, timing, fees, and market conditions. Not all ideas
+              reach targets and losses are possible. No trades are placed on
+              behalf of users.
             </p>
+            <div className="mt-6 overflow-hidden rounded-3xl border border-white/70 bg-white shadow-soft">
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-slate-200 text-left text-sm text-slate-600">
+                  <thead className="bg-slate-50 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                    <tr>
+                      <th className="px-6 py-4">Symbol</th>
+                      <th className="px-6 py-4">Idea Type</th>
+                      <th className="px-6 py-4">Example Entry</th>
+                      <th className="px-6 py-4">Example Target</th>
+                      <th className="px-6 py-4">Illustrative Move</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {illustrativeTradeIdeas.map((idea) => (
+                      <tr key={`${idea.symbol}-${idea.entry}`}>
+                        <td className="px-6 py-4 font-semibold text-slate-700">
+                          {idea.symbol}
+                        </td>
+                        <td className="px-6 py-4">{idea.idea}</td>
+                        <td className="px-6 py-4">{idea.entry}</td>
+                        <td className="px-6 py-4">{idea.target}</td>
+                        <td className="px-6 py-4 font-semibold text-emerald-700">
+                          {idea.move}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </Container>
         </section>
 
