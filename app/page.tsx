@@ -10,12 +10,7 @@ const PRICING = {
   monthlyPrice: "Then continue monthly"
 };
 
-const CHECKOUT_LINKS = {
-  trial:
-    "https://www.optionfundamentals.com/product/stockfundamentals-14-day-free-trial/",
-  monthly:
-    "https://www.optionfundamentals.com/product/stockfundamentals-14-day-free-trial/"
-};
+const TRIAL_FORM_ANCHOR = "#trial-form";
 
 const trustBullets = [
   "Entries & Targets",
@@ -105,7 +100,7 @@ export default function Home() {
             </a>
           </nav>
           <Link
-            href={CHECKOUT_LINKS.trial}
+            href={TRIAL_FORM_ANCHOR}
             className="rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
           >
             Start Free Trial
@@ -138,7 +133,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  href={CHECKOUT_LINKS.trial}
+                  href={TRIAL_FORM_ANCHOR}
                   className="rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                 >
                   Start Free Trial
@@ -164,7 +159,7 @@ export default function Home() {
                 <p className="mt-2 text-sm text-slate-600">
                   Activate your free trial in seconds. No credit card required.
                 </p>
-                <form className="mt-6 space-y-4">
+                <form id="trial-form" className="mt-6 space-y-4">
                   <div className="space-y-2 text-left">
                     <label
                       htmlFor="trial-name"
@@ -353,7 +348,7 @@ export default function Home() {
                     ))}
                   </ul>
                   <Link
-                    href={CHECKOUT_LINKS.trial}
+                    href={TRIAL_FORM_ANCHOR}
                     className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                   >
                     Start 14-Day Free Trial
@@ -409,7 +404,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-4">
                   <Link
-                    href={CHECKOUT_LINKS.trial}
+                    href={TRIAL_FORM_ANCHOR}
                     className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
                   >
                     Start 14-Day Free Trial
