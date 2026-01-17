@@ -10,7 +10,7 @@ const PRICING = {
   monthlyPrice: "Then continue monthly"
 };
 
-const TRIAL_FORM_ANCHOR = "#trial-form";
+const TRIAL_FORM_ANCHOR = "#trial-name";
 
 const trustBullets = [
   "Entries & Targets",
