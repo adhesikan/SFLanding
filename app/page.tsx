@@ -164,12 +164,62 @@ export default function Home() {
                 <p className="mt-2 text-sm text-slate-600">
                   Activate your free trial in seconds. No credit card required.
                 </p>
-                <Link
-                  href={CHECKOUT_LINKS.trial}
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
-                >
-                  Start Free Trial
-                </Link>
+                <form className="mt-6 space-y-4">
+                  <div className="space-y-2 text-left">
+                    <label
+                      htmlFor="trial-name"
+                      className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"
+                    >
+                      Name
+                    </label>
+                    <input
+                      id="trial-name"
+                      name="name"
+                      type="text"
+                      placeholder="Jane Trader"
+                      className="w-full rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2 text-left">
+                    <label
+                      htmlFor="trial-email"
+                      className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"
+                    >
+                      Email
+                    </label>
+                    <input
+                      id="trial-email"
+                      name="email"
+                      type="email"
+                      placeholder="you@email.com"
+                      className="w-full rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2 text-left">
+                    <label
+                      htmlFor="trial-phone"
+                      className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"
+                    >
+                      Phone
+                    </label>
+                    <input
+                      id="trial-phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="(555) 123-4567"
+                      className="w-full rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
+                      required
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
+                  >
+                    Get Free Trial Access
+                  </button>
+                </form>
               </div>
               <div className="mt-6 overflow-hidden rounded-2xl border border-white/70 bg-white shadow-sm">
                 <Image
