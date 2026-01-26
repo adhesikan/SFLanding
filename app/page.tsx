@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
+import { FormEvent, useState } from "react";
 
 const PRICING = {
   trialPrice: "$0 for 14 days",
@@ -81,6 +82,33 @@ const illustrativeTradeIdeas = [
 ];
 
 export default function Home() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+    const fullName = formData.get("name") as string;
+    const nameParts = fullName.trim().split(" ");
+    
+    // Split name into first and last name
+    const firstName = nameParts[0] || "";
+    const lastName = nameParts.slice(1).join(" ") || nameParts[0] || "";
+
+    // Redirect to thank-you page with form data for conversion tracking
+    const params = new URLSearchParams({
+      firstName,
+      lastName,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+    });
+
+    window.location.href = `/thank-you?${params.toString()}`;
+  };
+
   return (
     <div className="bg-gradient-to-br from-emerald-50 via-white to-sky-50 text-slate-900">
       <header className="sticky top-0 z-50 border-b border-white/60 bg-white/80 backdrop-blur">
@@ -159,13 +187,18 @@ export default function Home() {
                 <p className="mt-2 text-sm text-slate-600">
                   Activate your free trial in seconds. No credit card required.
                 </p>
-                <form id="trial-form" className="mt-6 space-y-4">
+                {error && (
+                  <div className="mt-4 rounded-lg bg-red-50 p-4 text-sm text-red-800">
+                    <div dangerouslySetInnerHTML={{ __html: error }} />
+                  </div>
+                )}
+                <form id="trial-form" className="mt-6 space-y-4" onSubmit={handleSubmit}>
                   <div className="space-y-2 text-left">
                     <label
                       htmlFor="trial-name"
                       className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"
                     >
-                      Name
+                      Full Name
                     </label>
                     <input
                       id="trial-name"
@@ -174,6 +207,7 @@ export default function Home() {
                       placeholder="Jane Trader"
                       className="w-full rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div className="space-y-2 text-left">
@@ -190,6 +224,7 @@ export default function Home() {
                       placeholder="you@email.com"
                       className="w-full rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div className="space-y-2 text-left">
@@ -206,13 +241,15 @@ export default function Home() {
                       placeholder="(555) 123-4567"
                       className="w-full rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm outline-none transition focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200"
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                   <button
                     type="submit"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600"
+                    disabled={isSubmitting}
+                    className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:from-emerald-700 hover:via-teal-600 hover:to-sky-600 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Get Free Trial Access
+                    {isSubmitting ? "Creating Account..." : "Get Free Trial Access"}
                   </button>
                 </form>
               </div>
