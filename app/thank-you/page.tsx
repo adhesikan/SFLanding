@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Container } from "@/components/Container";
 
-export default function ThankYou() {
+function ThankYouContent() {
   const searchParams = useSearchParams();
   const [status, setStatus] = useState<"loading" | "error">("loading");
   const [errorMessage, setErrorMessage] = useState("");
@@ -147,5 +147,46 @@ export default function ThankYou() {
         </div>
       </Container>
     </div>
+  );
+}
+
+export default function ThankYou() {
+  return (
+    <Suspense fallback={
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-emerald-50 via-white to-sky-50">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="rounded-3xl border border-white/70 bg-white/80 p-12 shadow-soft backdrop-blur">
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-emerald-100 to-sky-100">
+                <svg
+                  className="h-8 w-8 animate-spin text-emerald-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  />
+                </svg>
+              </div>
+              <h1 className="text-3xl font-semibold text-slate-900">
+                Loading...
+              </h1>
+            </div>
+          </div>
+        </Container>
+      </div>
+    }>
+      <ThankYouContent />
+    </Suspense>
   );
 }
