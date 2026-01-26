@@ -39,12 +39,18 @@ export async function POST(request: Request) {
     });
 
     let responseData;
+    let rawText;
     try {
-      responseData = await response.json();
+      rawText = await response.text();
+      responseData = JSON.parse(rawText);
     } catch (e) {
-      // If JSON parsing fails, return the raw response info
+      // If JSON parsing fails, return the raw response so we can see what WordPress returned
       return NextResponse.json(
-        { success: false, message: `WordPress returned status ${response.status} with non-JSON response` },
+        { 
+          success: false, 
+          message: `WordPress returned non-JSON response`,
+          rawResponse: rawText ? rawText.substring(0, 1000) : 'empty response'
+        },
         { status: 500 }
       );
     }
