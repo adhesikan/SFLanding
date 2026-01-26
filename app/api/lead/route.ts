@@ -38,18 +38,18 @@ export async function POST(request: Request) {
       body: JSON.stringify(data),
     });
 
-    const responseData = await response.json();
-
-    // Check if the request was successful
-    if (!response.ok) {
-      console.error("API request failed:", response.status, responseData);
+    let responseData;
+    try {
+      responseData = await response.json();
+    } catch (e) {
+      // If JSON parsing fails, return the raw response info
       return NextResponse.json(
-        { success: false, message: "Failed to create account" },
-        { status: response.status }
+        { success: false, message: `WordPress returned status ${response.status} with non-JSON response` },
+        { status: 500 }
       );
     }
 
-    // Handle the API response
+    // Handle the API response - check success field regardless of HTTP status
     if (responseData.success === true) {
       const { login_url, order_id, user_id } = responseData.data;
       
@@ -62,10 +62,11 @@ export async function POST(request: Request) {
         redirect: redirectUrl,
       });
     } else {
-      // User already exists or other error
+      // Return the actual error message from WordPress
       return NextResponse.json({
         success: false,
         message: responseData.message || "Account creation failed",
+        debug: responseData.data || null,
       });
     }
   } catch (error) {
